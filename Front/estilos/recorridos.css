@@ -1,0 +1,213 @@
+/* Estilos generales */
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background: #f0f0f0;
+}
+
+/* Estilos del header y navegación */
+header {
+    background-color: #298eb5;
+    color: white;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+
+.logo {
+    height: 65px;
+    margin-left: 2rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #bababa;
+    top: 315%;
+    left: -38%;
+    width: 130px;
+    box-shadow: 0 0 10px rgba(48, 51, 141, 0.5);
+}
+
+.submenu a {
+    display: block;
+    padding: 15px;
+    color: #4c86dc;
+    text-decoration: none;
+    text-align: left;
+}
+
+.submenu a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 2rem;
+    margin-top: 5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+
+h2 {
+    color: #333;
+}
+
+.report-section {
+    margin: 20px 0;
+}
+
+.report-section label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#report-type {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.date-range {
+    margin: 10px 0;
+}
+
+.date-range label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.date-range input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+#generate-report-btn {
+    padding: 6px 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #298eb5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#generate-report-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos específicos para los cuadraditos de colores */
+.color-section {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem; /* Espacio entre los cuadraditos y la imagen */
+}
+
+.color-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.rosa { background-color: pink; }
+.celeste { background-color: rgb(30, 160, 203); }
+.naranja { background-color: rgb(233, 115, 11); }
+.verde { background-color: rgb(76, 188, 76); }
+.violeta { background-color: rgb(127, 23, 127); }
+.verde_oscuro { background-color: rgb(34, 117, 59); }
+.rojo { background-color: rgb(240, 35, 93); }
+.amarillo { background-color: rgb(194, 182, 17); }
+.azul { background-color: rgb(31, 87, 170); }
+
+/* Estilo para la imagen del mapa */
+.map-image {
+    max-width: 95%;
+    height: auto;
+}
+
+/* Estilo para la envoltura del contenido */
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+/* Media queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    /* nav ul li a {
+        
+        margin-right: 100px;
+    } */
+
+}

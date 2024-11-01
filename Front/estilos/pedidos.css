@@ -1,0 +1,347 @@
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f0f0f0;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+    background-color: #298eb5;
+    color: white;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 65px;
+    margin-left: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #bababa;
+    top: 315%;
+    left: -38%;
+    width: 130px;
+    box-shadow: 0 0 10px rgba(48, 51, 141, 0.5);
+}
+
+.submenu a {
+    display: block;
+    padding: 15px;
+    color: #4c86dc;
+    text-decoration: none;
+    text-align: left;
+}
+
+.submenu a:hover {
+    background-color: #555;
+}
+
+/* Estilo para la sección principal */
+main {
+    padding: 2rem;
+    margin-top: 5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Botones generales */
+button {
+    background-color: #298eb5;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #76ace7;
+}
+
+/* Estilo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de cerrar modal */
+.close {
+    color: #e95050;
+    float: right;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo del formulario */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #298eb5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo de la tabla */
+/* table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+table th,
+table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+
+table th {
+    background-color: #b5d0e0;
+    color: black;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+} */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+table th,
+table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+
+table th {
+    background-color: #3885b1;
+    color: white;
+    font-weight: bold;
+}
+
+table tr {
+background-color: #b5d0e0;
+    }
+
+table tr:nth-child(even) {
+    background-color: #b5d0e0;
+}
+
+/* Tabla de clientes */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Estilos para la sección de reportes */
+.report-section {
+    margin: 20px 0;
+}
+
+.report-section label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#report-type {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.date-range {
+    margin: 10px 0;
+}
+
+.date-range label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.date-range input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+#generate-report-btn {
+    padding: 6px 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #298eb5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#generate-report-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .form-wrapper {
+        padding: 0.3rem;
+        
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin-right: 50%;
+        margin-top: 45%;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    table th, table td {
+        padding: 0.5rem;
+        
+    }
+
+    button {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+
+}

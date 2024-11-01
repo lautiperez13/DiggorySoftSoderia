@@ -1,0 +1,70 @@
+-----Programacion 2--------Prof. Emilio Amero---------------------------
+
+-----Instalacion----
+
+Teniendo ya node.js instalado
+Abrir la consola y posicionarse en el mismo directorio donde se encuentra el archivo 
+package.json
+
+Ejecutar 'npm install' para instalar las dependecias 
+
+--Para utilizar la API 
+Para iniciar el servidor ejecutar 'node index.js'
+Para iniciar con nodemon es  'npm run dev'
+La consola debe mostrar Servidor iniciado en el puerto <Numero>
+No cerrar la consola
+
+--Metodos para esta API 
+Utilizando un gestor de Peticiones como Postman: 
+
+--directorio raiz
+Metodo: GET
+http://localhost:3000
+
+
+--Obtener todos 
+Metodo: GET
+http://localhost:3000/data
+
+--Obtener solo uno 
+Metodos: GET
+http://localhost:3000/data/:id
+
+
+--Guardar uno
+Metodos:POST
+http://localhost:3000/data
+
+Body:
+{
+"id": 4,
+"nombre": "Juan",
+"apellido": "Pérez",
+"edad": 30
+}
+
+
+--Editar uno
+http://localhost:3000/data/:id
+Metodo: PUT
+Body:
+{
+"id": 4,
+"nombre": "Juan",
+"apellido": "Pérez",
+"edad": 30
+}
+ 
+--Editar solo un campo
+http://localhost:3000/data/:id
+Metodo: PUT
+
+Body:
+{
+  "edad": 31
+}
+
+
+--Eliminar un registro
+Metodo: DELETE
+http://localhost:3000/data/:id

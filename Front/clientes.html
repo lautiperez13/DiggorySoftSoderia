@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiggorySoft - Clientes</title>
+    <link rel="stylesheet" href="estilos/clientes.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="modulos.html">
+                <img src="estilos/imagenes/logo_grande-removebg-preview.png" alt="Logo" class="logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="modulos.html">Menú</a></li>
+                <li><a href="ayuda.html">Acerca de</a></li>
+                <li><a href="login.html" style="color: rgb(80, 14, 14);">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main><br>
+        <h2>Clientes</h2>
+        <hr>
+        <br>
+        <button id="toggleFormButton" onclick="toggleFormulario()">Añadir Cliente</button>
+
+        <!-- Formulario Fijo -->
+        <div class="form-wrapper" >
+            <form id="clienteForm"  onsubmit="return false;">
+                <label for="idCliente">ID Cliente:</label> 
+                <input type="text" id="idCliente" name="idCliente" disabled><br><br>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="idBarrio">Barrio:</label>
+                <select id="idBarrio" name="idBarrio" required>
+                    <!-- Aquí se llenarán los barrios desde el JavaScript -->
+                </select><br><br>
+
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required><br><br>
+                
+
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required><br><br>
+
+                <label for="ciudad">Ciudad:</label>
+                <select id="ciudad" name="ciudad" required>
+                    <option value disabled selected=''>Seleccionar ciudad</option>
+                    <option value="Villa María">Villa María</option>
+                </select><br><br>
+
+
+                <button type="button" id="botonGuardarForm" onclick="guardarCliente()">Guardar</button>
+                <button type="button" disabled id="botonModificarForm" onclick="actualizarCliente()">Actualizar</button>
+            </form>
+        </div>
+        
+        <br>
+
+        <!-- Tabla de Clientes -->
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th>ID Cliente</th>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        <th>Ciudad</th>
+                        <th>Barrio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="table_cliente">
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="./source/codigo.js"></script>
+</body>
+</html>
+

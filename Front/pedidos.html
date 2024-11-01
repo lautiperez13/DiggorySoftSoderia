@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiggorySoft - Pedidos</title>
+    <link rel="stylesheet" href="estilos/clientes.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="modulos.html">
+                <img src="estilos/imagenes/logo_grande-removebg-preview.png" alt="Logo" class="logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="modulos.html">Menú</a></li>
+                <li><a href="ayuda.html">Acerca de</a></li>
+                <li><a href="login.html" style="color: rgb(80, 14, 14);">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Pedidos</h2>
+        <hr>
+        <br>
+        <button id="toggleFormButton" onclick="toggleFormulario()">Añadir Pedido</button><br>
+
+        <div class="form-wrapper">
+            <form id="clienteForm" onsubmit="return false;">
+                <label for="idPedido">ID Pedido:</label> 
+                <input type="text" id="idPedido" name="idPedido" disabled><br><br>
+                <!-- Cliente -->
+                <label for="cliente">Cliente:</label>
+                <select id="cliente" name="cliente" required></select><br>
+
+                <!-- Dirección, Barrio, Día de Entrega -->
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" readonly required><br>
+
+                <label for="barrio">Barrio:</label>
+                <input type="text" id="barrio" name="barrio" readonly required><br>
+
+                <label for="diaEntrega">Día de Entrega:</label>
+                <input type="text" id="diaEntrega" name="diaEntrega" readonly required><br><br>
+
+
+                <!-- Estado, Recorrido, Tipo de Pedido, Forma de Pago -->
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Entregado">Entregado</option>
+                </select><br>
+
+                <label for="recorrido">Recorrido:</label>
+                <select id="recorrido" name="recorrido" required></select><br>
+
+                <label for="tipoPedido">Tipo de Pedido:</label>
+                <select id="tipoPedido" name="tipoPedido" required></select><br>
+
+                <label for="formaPago">Forma de Pago:</label>
+                <select id="formaPago" name="formaPago" required></select><br>
+
+                <!-- Fecha del Pedido -->
+                <label for="fechaPedido">Fecha de Pedido:</label>
+                <input type="date" id="fechaPedido" name="fechaPedido" required><br><br>
+
+                <!-- Botones -->
+                <button type="button" id="botonGuardarForm" onclick="guardarPedido()">Guardar Pedido</button>
+                <button type="button" disabled id="botonModificarForm" onclick="actualizarPedido()">Actualizar Pedido</button>
+            </form>
+            
+        </div>
+
+        <!-- Carrito de productos -->
+<div id="carrito">
+    <h3>Carrito de Productos</h3>
+    <label for="producto">Producto:</label>
+    <select id="producto" name="producto">
+        <!-- Opciones de productos serán cargadas dinámicamente -->
+    </select>
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" name="cantidad" min="1" value="1">
+    <button type="button" onclick="agregarProducto()">Agregar Producto</button>
+
+    <!-- Tabla para mostrar los productos añadidos al carrito -->
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Total</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="carritoTabla">
+            <!-- Filas de productos añadidos al carrito aparecerán aquí -->
+        </tbody>
+    </table>
+
+    <!-- Total del pedido -->
+    <h4>Total del Pedido: $<span id="totalPedido">0.00</span></h4>
+    
+</div><br><hr>
+
+
+        <!-- Tabla de Pedidos -->
+        <br>
+        <h3>Lista de Pedidos</h3>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th>ID Pedido</th>
+                        <th>Cliente</th>
+                        <th>Fecha</th>
+                        <th>Recorrido</th>
+                        <th>Tipo de Pedido</th>
+                        <th>Forma de Pago</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="order-list">
+                    <!-- Contenido dinámico -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="source/pedidos.js" defer></script>
+</body>
+</html>

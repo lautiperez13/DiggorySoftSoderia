@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #d3d5db;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-section {
+    background-color: #fdfdfd;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-box .logo {
+    max-width: 450px;
+    margin-bottom: 50px;
+    margin-left: -10px;
+}
+
+.encabezado{
+    
+        background-color: blue;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-box h2 span {
+    color: #00aaff;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #00c853;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00b843;
+}
+
+.image-section {
+    width: 50%;
+    background: url('imagenes/background.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    text-align: center;
+}
+
+.quote p {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Para pantallas de tamaño mediano (tablets) */
+@media (max-width: 768px) {
+    .login-section {
+        width: 80%;
+        min-height: 100vh; /* Ajusta la altura mínima para dispositivos móviles */
+    }
+
+    .image-section {
+        display: none;
+    }
+    .login-box .logo {
+        max-width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .input-group input {
+        padding: 8px; /* Reduce el padding de los inputs en pantallas pequeñas */
+    }
+
+    button {
+        padding: 12px; /* Reduce ligeramente el padding del botón */
+    }
+}
+/* Para pantallas de tamaño pequeño (móviles) */
+@media (max-width: 480px) {
+    body {
+        height: auto;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .login-section, .image-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .login-box {
+        max-width: 100%;
+    }
+
+    .login-box .logo {
+        max-width: 200px;
+        margin-bottom: 30px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .image-section {
+        display: none;
+    }
+
+    .quote p {
+        font-size: 14px;
+    }
+}
+
+
+

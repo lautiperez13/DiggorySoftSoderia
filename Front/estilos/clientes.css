@@ -1,0 +1,284 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f0f0f0;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+    background-color: #298eb5;
+    color: white;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 65px;
+    margin-left: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo del main */
+main {
+    padding-top: 6rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Formulario de clientes */
+.form-wrapper {
+    display: none;
+    background-color: #a9d2e3;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto 2rem;
+    width: 100%;
+}
+
+
+/* Estilos para la subgrilla de productos */
+.fl-subtable {
+    width: 95%;
+    margin: 10px auto;
+    border-collapse: collapse;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.fl-subtable thead th {
+    background-color: #6c757d; /* Gris oscuro */
+    color: #ffffff;
+    padding: 8px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.fl-subtable tbody td {
+    padding: 8px;
+    border-top: 1px solid #e9ecef;
+    color: #495057;
+}
+
+.fl-subtable tbody tr:nth-child(even) {
+    background-color: #f1f3f5; /* Gris claro para filas pares */
+}
+
+.fl-subtable tbody tr:hover {
+    background-color: #e2e6ea; /* Color de fondo cuando el mouse pasa por encima */
+}
+
+
+
+#carrito {
+    display: none;
+    background-color: #a9d2e3;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0 auto 2rem;
+}
+
+#carrito tr {
+    background-color: #a9d2e3;
+}
+
+#clienteForm {
+    display: none;
+    flex-direction: column;
+}
+
+#clienteForm label {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+#clienteForm input {
+    padding: 0.75rem;
+    margin-bottom: 0.1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+#clienteForm select {
+    padding: 0.75rem;
+    margin-bottom: 0.1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    background-color: #298eb5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #76ace7;
+}
+
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Tabla de clientes */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+    background-color: #298eb5;
+    color: white;
+}
+
+table th, table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+} */
+
+/* table tr:hover {
+    background-color: #f1f1f1;
+} */
+
+/* Botones de acción en la tabla */
+/* table button {
+    background-color: #298eb5;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table button.delete-button {
+    background-color: #e74c3c;
+}
+
+table button:hover {
+    background-color: #76ace7;
+}
+
+table button.delete-button:hover {
+    background-color: #c0392b;
+} */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+table th,
+table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+
+table th {
+    background-color: #3885b1;
+    color: white;
+    font-weight: bold;
+}
+
+table tr {
+background-color: #b5d0e0;
+    }
+
+table tr:nth-child(even) {
+    background-color: #b5d0e0;
+}
+
+/* table tr:hover {
+    background-color: #f1f1f1;
+} */
+
+
+
+/* Media queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .form-wrapper {
+        padding: 0.3rem;
+        
+    }
+
+    table th, table td {
+        padding: 0.5rem;
+        
+    }
+
+    button {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+}
